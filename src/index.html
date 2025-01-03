@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+<link href="./index.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!--  Routes  -->
+  <div class="main">
+    
+  </div>
+  <!-- HOME -->
+  <div class="home">
+  
+  <div class="navbar">
+   <img src="/images/navbg.jpg"/>
+   <div class="title">
+     <p>Nagpur</p>
+     <h1>Colleges</h1>
+   </div>
+   <div class="linklogin">
+     <div class="navlinkdiv">
+       <a class="navlinks" href="https://www.linkedin.com/in/ritish-das-979536277">Linkedin</a>
+       <a class="navlinks" href="https://x.com/RDCasual116">X</a>
+       <a class="navlinks" href="https://github.com/RDCasual116/">Github</a>              
+     </div>
+     <div>
+     <button onclick={navigate("/index.html/login")} id="loginbtn">Login/Register</button>
+       <div class="dropdown" style="display:none;">
+    <button class="dropdown-btn">Profile</button>
+    <div class="dropdown-content">
+      <div class="profile-info">
+        <p class="name">John Doe</p>
+        <p class="email">johndoe@example.com</p>
+      </div>
+      <button class="dropdown-item" onclick={navigate("/index.html/addservice")}>Services</button>
+      <button class="dropdown-item" onclick={navigate("/index.html/savedcoll")}>Saved College</button>
+      <button class="dropdown-item" onclick={navigate("/index.html/savedser")}>Saved Services</button>
+            <button class="dropdown-item">Log Out</button>
+    </div>
+  </div>
+     </div>
+     
+   </div>
+</div>
+
+
+ 
+
+<div class="bgtitle">
+  <h2>
+   SEARCH <br/>
+   BEST COLLEGES<br/>
+   IN NAGPUR
+  </h2>
+</div>
+<div class="menudiv">
+<div class="menu">
+  <button onclick={navigate("/index.html/college")}>College</button>
+  <button onclick={navigate("/index.html/room")}>Room</button>
+  <button onclick={navigate("/index.html/tiffin")}>Tiffin</button>
+</div>
+</div>
+
+<div class="homefirstd">
+<div class="servicead">
+  <img src="/images/adservice.jpg"/>
+  <h2>
+    Advertise your<br/>room and tiffin<br/>service
+  </h2>
+</div>
+<div class="servicead">
+<img src="/images/byservice.jpg" />
+<h2>
+  Buy<br />room and tiffin<br />service
+</h2>
+</div>
+
+<div class="collegediv">
+  
+  <h1>Colleges</h1>
+  <div class="college">
+    <div class="collcomp"><div
+    onclick={navigate("/index.html/college/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      </div>
+      <button onclick={savecollege({id})}>save</button>
+    </div>
+    
+     <!--3college-->
+  </div>
+</div>
+
+</div>
+
+<div class="homesecondd">
+    <h1>Rooms</h1>
+  <div class="college secondd">
+    <div class="collcomp secondcomp"><div onclick={navigate("/index.html/service/{id}")}>
+      <img src="{photo}"/>
+       <h6>{name}</h6>
+      <h6>{location}</h6>
+      <h6>{price}</h6></div>
+      <button onclick={saveservice({id})}>save</button>
+    </div>
+    
+         <!--4comp-->
+  </div>
+</div>
+<div class="homesecondd">
+    <h1>Tiffin</h1>
+  <div class="college secondd tiffin">
+    <div class="collcomp secondcomp">
+     <div onclick={navigate("/index.html/service/{id}")}>
+      <img src="{photo}"/>
+       <h6>{name}</h6>
+      <h6>{location}</h6>
+      <h6>{price}</h6></div>
+      <button onclick={saveservice({id})}>save</button>
+    </div>
+    
+         <!--4comp-->
+  </div>
+</div>
+
+<div class="hmr">
+  <h1>
+    Made With Homemade_React
+  </h1>
+  <div>
+  <img src="/images/homemadereact.png"/>
+  <div>
+  <p>
+   Homemade_React is my project which is a light weight framework that implements a state management system, a prop system, and a simple router, similar to the functionalities found in React
+  </p>
+   <a href="https://github.com/RDCasual116/Homemade_React">Visit</a></div>
+  </div>
+ 
+</div></div>
+
+
+<!--  HOME ROUTE END  -->
+
+
+<div class="collegeroute">
+    <div id="collcard">
+     <div class="collcomp allccomp">
+    <div
+    onclick={navigate("/index.html/college/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      </div>
+      <button onclick={savecollege({id})}>save</button>
+    </div>
+     
+     </div>
+</div>
+
+
+<div class="roomroute">
+    <div id="collcard">
+     <div class="collcomp allccomp" 
+    onclick={navigate("/index.html/serv/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      <h5>{price}</h5>
+      <button onclick={saveservice({id})>save</button>
+    </div>
+     
+     </div>
+</div>
+
+<div class="tiffinroute">
+    <div id="collcard">
+     <div class="collcomp allccomp" 
+    onclick={navigate("/index.html/serv/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      <h5>{price}</h5>
+      <button onclick={saveservice({id})>save</button>
+    </div>
+     
+     </div>
+</div>
+
+<div class="savedser">
+    <div id="collcard">
+     <div class="collcomp allccomp" 
+    onclick={navigate("/index.html/serv/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      <h5>{price}</h5>
+      <button onclick={saveservice({id})>save</button>
+    </div>
+     
+     </div>
+</div>
+
+<div class="savedcoll">
+    <div id="collcard">
+     <div class="collcomp allccomp" 
+    onclick={navigate("/index.html/college/{id}")}
+    id="college{id}">
+      <img src="{photo}"/>
+      <h5>{name}</h5>
+      
+      <button onclick={savecollege({id})>save</button>
+    </div>
+     
+     </div>
+</div>
+
+
+
+<div class="collroute">
+  
+  <div class="colldiv">
+    <header class="college-header">
+      <h1>{name}</h1>
+      <p class="address">
+        <a href="{llink}" target="_blank">
+        {location}
+        </a>
+      </p>
+    </header>
+    <main class="college-details">
+      <section >
+        <h2>About Us</h2>
+        <p class="about"></p>
+      </section>
+      <div class="cpageislider">
+        <div class="sliderimg">
+   <img src="{photos}" alt="Image 1"/>
+    </div>
+   </div>
+       <h2>College Details</h2>
+      <section >
+       
+        <ul class="details">
+
+        </ul>
+      </section>
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <address>
+          
+          <p><strong>Website:</strong>
+            <a href="{website}" target="_blank">{website}</a>
+          </p>
+        </address>
+      </section>
+      <section class="reviews">
+        <h2>Student Reviews</h2>
+        <div class="ureview">
+          <p><strong>Overall Rating:</strong> ⭐⭐⭐⭐☆</p>
+          <h1>4</h1>
+        </div>
+        <form action="http://localhost:8000/api/college/{id}/comment" method="post">
+          <h4>Add Comment</h4>
+          <div class="stard">
+          <div class="radiostar">
+    <input type="radio" onclick={starhandler(1)} value="1" name="rating"/>
+    <input type="radio" onclick={starhandler(2)} value="2" name="rating"/>
+    <input type="radio" onclick={starhandler(3)} value="3" name="rating"/>  
+    <input type="radio" onclick={starhandler(4)} value="4" name="rating"/> 
+    <input type="radio" onclick={starhandler(5)} value="5" name="rating"/>
+  </div>
+ <div class="shtarget">
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+ </div>
+ </div>
+      <div class="unreview">  <input type="text" name="content" placeholder="Add comment" class="commentinput"/>
+        <button>submit</button></div>
+        </form>
+        <div class="review">
+          <div style="margin:20px 0 20px 0;">
+          <p><h4><h3>{email}</h3><div class="rating-star">{rating}</div></h4> {content}</p></div>
+        </div>
+       
+      </section>
+    </main>
+  </div>
+  </div>
+  
+  <div class="serviceroute">
+  
+  <div class="colldiv servdiv">
+    <header class="college-header">
+      <h1>{name}</h1>
+      <p class="address">
+        <a href="{llink}" target="_blank">
+        {location}
+        </a>
+      </p>
+    </header>
+    <main class="college-details">
+      <section >
+        <h2>About Us</h2>
+        <p class="servabout about"></p>
+        <p>{price} Rs/month</p>
+      </section>
+      <div class="cpageislider">
+        <div class="sliderimg servslider">
+   <img src="{photos}" alt="Image 1"/>
+    </div>
+   </div>
+       <h2>Service Details</h2>
+      <section >
+       
+        <ul class="servdetails details">
+
+        </ul>
+      </section>
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <address>
+          
+          <p><strong>Phone:</strong>
+            {contact}
+          </p>
+        </address>
+      </section>
+      <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <form action="http://localhost:8000/api/service/{id}/comment" method="post">
+          <h4>Add Comment</h4>
+          <div class="stard">
+          <div class="radiostar">
+    <input type="radio" onclick={starhandler(1)} value="1" name="rating"/>
+    <input type="radio" onclick={starhandler(2)} value="2" name="rating"/>
+    <input type="radio" onclick={starhandler(3)} value="3" name="rating"/>  
+    <input type="radio" onclick={starhandler(4)} value="4" name="rating"/> 
+    <input type="radio" onclick={starhandler(5)} value="5" name="rating"/>
+  </div>
+ <div class="shtarget">
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+   <img src="/images/offstar.png"/>
+ </div>
+ </div>
+      <div class="unreview">  <input type="text" name="content" placeholder="Add comment" class="commentinput"/>
+        <button>submit</button></div>
+        </form>
+        <div class="review servreview">
+          <div style="margin:20px 0 20px 0;">
+          <p><h4><h3>{email}</h3><div class="rating-star">{rating}</div></h4> {content}</p></div>
+        </div>
+       
+      </section>
+    </main>
+  </div>
+  </div>
+  
+  <!--  service route end  -->
+  
+  <div class="loginroute"><div id="login">
+      <div class="login-container">
+        <h1>Login</h1>
+        <form action="http://localhost:8000/api/user/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+            <button type="button" class="register-btn" onclick={navigate("/index.html/register")}>Register</button>
+        </form>
+    </div>
+    </div>
+  </div>
+  <div class="register-route">
+    <div class="register">
+      <div class="container">
+    <h1>Register</h1>
+    <form id="registration-form">
+      <!-- Step 1: Name and Email -->
+      <div class="form-step" id="step-1">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <button type="button" onclick="submitStep1()">Next</button>
+      </div>
+      
+      <!-- Step 2: OTP and Password -->
+      <div class="form-step hidden" id="step-2">
+        <label for="otp">OTP</label>
+        <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+        
+        <label for="password">Create Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        
+        <button type="button" onclick="submitStep2()">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+  
+  
+  
+     <div class="footer">
+     <div>
+     <img src="images/ritish.jpg"/>
+     <h1>RITISH</h1>
+       <a href="https://x.com/RDCasual116?t=TlYb6HmY08vDm_FCNza4-w&s=09"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" viewBox="0 0 512 512" id="twitter"><g clip-path="url(#clip0_84_15697)"><rect width="512" height="512" fill="#000" rx="60"></rect><path fill="#fff" d="M355.904 100H408.832L293.2 232.16L429.232 412H322.72L239.296 302.928L143.84 412H90.8805L214.56 270.64L84.0645 100H193.28L268.688 199.696L355.904 100ZM337.328 380.32H366.656L177.344 130.016H145.872L337.328 380.32Z"></path></g><defs><clipPath id="clip0_84_15697"><rect width="512" height="512" fill="#fff"></rect></clipPath></defs></svg></a>
+       <a href="https://www.linkedin.com/in/ritish-das-979536277"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+<path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
+</svg></a>
+     </div>
+   </div>
+   
+   <div class="sersubmit">
+     <div class="submit-main">
+         <form action="http://localhost:8000/api/service/addservice" method="POST" enctype="multipart/form-data" class="form-container">
+        <h1 class="form-title">Submit Your Details</h1>
+        <label class="form-label">Name:</label>
+        <input type="text" name="name" class="form-input" required>
+        
+ <label class="form-label">Id:</label>
+        <input type="text" name="id" class="form-input" required>
+       <label class="form-label">Type:</label>
+        <input type="text" name="type" class="form-input" required>
+       
+        <label class="form-label">Price:</label>
+        <input type="number" name="price" class="form-input" step="0.01">
+
+        <label class="form-label">contact:</label>
+        <input type="text" name="contact" class="form-input" placeholder="10-digit number" >
+
+        <label class="form-label">Location:</label>
+        <input type="text" name="location" class="form-input" >
+        <label class="form-label">Photos:</label>
+        <input type="file" name="photos" class="form-input" multiple>
+
+        <label class="form-label">Terms:</label>
+        <div class="terms-container"></div>
+        <button type="button" class="form-button add-term-btn" onclick={multiterm()}>Add Term</button>
+
+        <button type="submit" class="form-button">Submit</button>
+    </form>
+   </div>
+   </div>
+
+<script src="./main.js"></script>
+</body>
+
+
+
+
+</html>
